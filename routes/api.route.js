@@ -1,4 +1,4 @@
-const cronController = require('./../controller/birtday-cron-job');
+const cronController = require('../controller/birthday-cron-job');
 const express = require('express');
 const ApiRouter = express.Router();
 

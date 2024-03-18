@@ -1,8 +1,7 @@
-const userModel = require('./../model/user');
-const AppError = require('./../utils/appError');
+const userModel = require('../model/user');
+const AppError = require('../utils/appError');
 const cron = require('node-cron');
-const schedule = require('node-cron');
-const EmailSender = require('./../utils/email');
+const EmailSender = require('../utils/email');
 const CollectInfo = async (req, res, next) => {
   try {
     const details = req.body;
@@ -53,7 +52,7 @@ const SendBirthDayMessage = () => {
 };
 
 const SendCronJob = () => {
-  const birthdayTask = cron.schedule('0 8 * * *', () => {
+  const birthdayTask = cron.schedule('0 7 * * *', () => {
     const birthdays = findAllBirthDate();
     birthdayTask.destroy();
     return birthdays;

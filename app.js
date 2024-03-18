@@ -2,7 +2,8 @@ const express = require('express');
 const mongoDbConnection = require('./config');
 const errorhandler = require('./controller/errorController');
 const ApiRouter = require('./routes/api.route');
-const { SendCronJob } = require('./controller/birtday-cron-job');
+const viewRouter = require('./routes/view');
+const { SendCronJob } = require('./controller/birthday-cron-job');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -15,8 +16,10 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', ApiRouter);
+app.use('/view', viewRouter);
+
 SendCronJob();
 app.all('*', (req, res, next) => {
   res.status(404).json({ status: 'fail', message: 'page not found' });
