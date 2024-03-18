@@ -2,7 +2,9 @@
 
 ## INTRODUCTION
 
-This simple but helpful web app, keep you notified about the birthday of your loved ones or yourself. With a few clicks, you don't have to worry about when is your birthday or the birthday of your loved ones.
+This is a simple but helpful web app, keep you notified about the birthday of your loved ones or yourself. With a few clicks, you don't have to worry about when is your birthday or the birthday of your loved ones.
+
+# LIVE LINK : https://birthday-reminder-h51p.onrender.com
 
 # TECH STACK
 
@@ -16,7 +18,7 @@ MongoDb
 
 - Clone The repo and cd into your base folder
 
-  `git clone [https://github.com/DevCosmas/briefly-demo.git](https://github.com/DevCosmas/birthday-reminder.git)`
+  `git clone [https:(https://github.com/DevCosmas/birthday-reminder.git)`
 
   `cd into <base folder>`
 
